@@ -1,4 +1,3 @@
-import { checkExposedEncryptedVars } from "@luxfhe/hardhat-plugin";
 import { DeployFunction } from "hardhat-deploy/types";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
@@ -32,12 +31,10 @@ const deployRngBinaryGame: DeployFunction = async function (
   // Fund the account before deploying.
   if (hre.network.name === "localluxfhe") {
     if ((await hre.ethers.provider.getBalance(deployer)) === 0n) {
-      await hre.luxfhejs.getFunds(deployer);
+      await hre.luxfhe.getFunds(deployer);
       console.log("Received tokens from the local faucet. Ready to deploy...");
     }
   }
-
-  await checkExposedEncryptedVars(hre);
 
   await deploy("RngBinaryGame", {
     from: deployer,

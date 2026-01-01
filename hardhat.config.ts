@@ -3,12 +3,12 @@ dotenv.config();
 import "@typechain/hardhat";
 import "@nomicfoundation/hardhat-ethers";
 import "@nomicfoundation/hardhat-chai-matchers";
+import "@nomicfoundation/hardhat-foundry";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
 import "@nomicfoundation/hardhat-verify";
 import "hardhat-deploy";
 import "hardhat-deploy-ethers";
-import "@luxfhe/hardhat-docker";
 import "@luxfhe/hardhat-plugin";
 import "@luxfhe/hardhat-network";
 
@@ -28,8 +28,9 @@ const etherscanApiKey =
 
 const config = {
   solidity: {
-    version: "0.8.24",
+    version: "0.8.31",
     settings: {
+      evmVersion: "cancun",
       optimizer: {
         enabled: true,
         // https://docs.soliditylang.org/en/latest/using-the-compiler.html#optimizer-options
