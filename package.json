@@ -39,7 +39,7 @@
     "@luxfi/contracts": "^1.4.0",
     "@luxfhe/hardhat-docker": "file:../../packages/hardhat-docker",
     "@luxfhe/hardhat-network": "file:../../packages/hardhat-network",
-    "@luxfhe/hardhat-plugin": "file:../../packages/hardhat-plugin",
+    "@luxfhe/hardhat-plugin": "^0.5.0",
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.3",
     "@nomicfoundation/hardhat-ethers": "^3.0.5",
     "@nomicfoundation/hardhat-network-helpers": "^1.0.6",
